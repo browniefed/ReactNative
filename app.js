@@ -18,7 +18,7 @@ class App extends Component {
             this.handleAddItem = this.handleAddItem.bind(this);
             this.handleToggleAllComplete = this.handleToggleAllComplete.bind(this);
         }
-        setSource(items, itemsDatasource, otherState = {} {
+        setSource(items, itemsDatasource, otherState = {}) {
             this.setState({
                 items,
                 dataSource: this.state.dataSource.cloneWithRows(itemsDatasource),
@@ -35,7 +35,7 @@ class App extends Component {
             this.setState({
                 items: newItems,
                 allComplete: complete
-            }))
+            })
             this.setSource(newItems, newItems, {allComplete: complete})
         }
         handleAddItem() {
